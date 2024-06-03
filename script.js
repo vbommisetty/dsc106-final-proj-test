@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Promise.all([
         d3.json('us-states.geojson'),
-        d3.json('2022_data.json')
+        d3.json('2008_data.json')
     ]).then(function([geojsonData, stateData]) {
         geojsonData.features.forEach(feature => {
             const stateInfo = stateData[feature.properties.name];
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const maxMigration = d3.max(geojsonData.features, d => d.properties.going_to_california);
         const colorScale = d3.scaleLinear()
             .domain([0, maxMigration])
-            .range(["#4280eb", "#013b11"]);
+            .range(["#b3e9ff", "#00465c"]);
 
         // Define a scale for the stroke width
         const strokeWidthScale = d3.scaleLinear()
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .enter()
             .append("path")
             .attr("d", path)
-            .attr("fill", d => d.properties.name === "California" ? "#8953fc" : colorScale(d.properties.going_to_california))
+            .attr("fill", d => d.properties.name === "California" ? "#039c70" : colorScale(d.properties.going_to_california))
             .attr("stroke", "white")
             .attr("stroke-width", "2.5")
             .on("mouseover", function(event, d) {
