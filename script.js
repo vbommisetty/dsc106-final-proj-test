@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Promise.all([
         d3.json('us-states.geojson'),
-        d3.json('states_data.json')
+        d3.json('2022_data.json')
     ]).then(function([geojsonData, stateData]) {
         geojsonData.features.forEach(feature => {
             const stateInfo = stateData[feature.properties.name];
