@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow-y: auto; /* Ensure the body is scrollable */
+}
+
+header {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  font-size: 24px;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#map-container {
+  width: 100%;
+  overflow: auto; /* Enable scrolling within the map container */
+}
+
+#tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  visibility: hidden; /* Initially hidden */
+}
+
+.text-block {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#map {
+  width: 800px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+#line-plot-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#line-plot {
+  width: 800px;
+  height: 400px;
+  border: 1px solid black;
+}
