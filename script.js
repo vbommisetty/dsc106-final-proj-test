@@ -173,16 +173,11 @@ document.addEventListener('DOMContentLoaded', function() {
             };
         });
 
-<<<<<<< Updated upstream
-        // Filter out states with migration <= 10000 and exclude California itself
-        const filteredCentroids = centroids.filter(d => d.going_to_california > 10000 && d.name !== "California");
-=======
         // Filter states with migration > 20000 and exclude California itself
         const backfilteredCentroids = centroids.filter(d => d.going_to_california - d.coming_from_california > 4500 && d.name !== "California");
 
         // Filter states with migration > 10000 and exclude California itself
         const filteredCentroids = centroids.filter(d => d.going_to_california - d.coming_from_california < -10000 && d.name !== "California");
->>>>>>> Stashed changes
 
         const californiaCentroid = centroids.find(d => d.name === "California").centroid;
         
