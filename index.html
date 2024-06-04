@@ -15,22 +15,8 @@
         Line plot container
         <div id="line-plot-container">
             <svg id="line-plot"></svg>
+            <div id="tooltip-line" class="tooltip"></div>
         </div>
-        <style>
-            #tooltip-line {
-                position: absolute;
-                text-align: center;
-                width: auto;
-                height: auto;
-                padding: 8px;
-                font: 12px sans-serif;
-                background: lightsteelblue;
-                border: 0px;
-                border-radius: 8px;
-                pointer-events: none;
-                visibility: hidden;
-            }
-        </style>
         <div class="text-block">
             <p>
                 This visualization shows the migration trends from California to other states in the USA.
@@ -39,7 +25,7 @@
         </div>
         <div id="map-container">
             <svg id="map"></svg>
-            <div id="tooltip" style="position: absolute; visibility: hidden; padding: 10px; background-color: white; border: 1px solid black; border-radius: 5px; pointer-events: none;"></div>
+            <div id="tooltip" class="tooltip"></div>
         </div>
         <div class="text-block">
             <p>
