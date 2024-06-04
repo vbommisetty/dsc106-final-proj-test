@@ -16,6 +16,21 @@
         <div id="line-plot-container">
             <svg id="line-plot"></svg>
         </div>
+        <style>
+            #tooltip-line {
+                position: absolute;
+                text-align: center;
+                width: auto;
+                height: auto;
+                padding: 8px;
+                font: 12px sans-serif;
+                background: lightsteelblue;
+                border: 0px;
+                border-radius: 8px;
+                pointer-events: none;
+                visibility: hidden;
+            }
+        </style>
         <div class="text-block">
             <p>
                 This visualization shows the migration trends from California to other states in the USA.
